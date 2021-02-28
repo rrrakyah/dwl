@@ -1,17 +1,18 @@
 # Maintainer: Devin J. Pohly <djpohly+arch@gmail.com>
 pkgname=dwl-kat
 _gitname=dwl-patched
-pkgver=0.2
+pkgver=r478.c6d839a
 pkgrel=1
 pkgdesc="Simple, hackable dynamic tiling Wayland compositor (dwm for Wayland)"
 arch=('x86_64')
 url="https://github.com/djpohly/dwl"
 license=('GPL')
 depends=('wlroots')
+conflicts=(dwl)
 source=(git+https://github.com/rrrakyah/dwl-patched
         config.h
        	dwl.desktop)
-sha256sums=(SKIP 'ee03a2cac6c4477702c8014e5ae5455c0acf4f47b87441c06e5da545ec234fa1'
+sha256sums=(SKIP #'ee03a2cac6c4477702c8014e5ae5455c0acf4f47b87441c06e5da545ec234fa1'
             SKIP
             SKIP)
 
@@ -37,5 +38,5 @@ build() {
 package() {
 	cd "$srcdir/$_gitname"
 	make PREFIX="$pkgdir/usr/" install
-	install -m644 -D "$srcdir/dwl.desktop" "$pkgdir/usr/share/wayland-sesssions/dwl.desktop"
+	install -m644 -D "$srcdir/dwl.desktop" "$pkgdir/usr/share/wayland-sessions/dwl.desktop"
 }
