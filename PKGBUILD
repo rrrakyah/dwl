@@ -7,9 +7,9 @@ arch=('x86_64')
 url="https://github.com/djpohly/dwl"
 license=('GPL')
 depends=('wlroots')
-source=("https://github.com/djpohly/$pkgname/archive/v$pkgver.tar.gz"
+source=(git+https://github.com/rrrakyah/dwl-patched
         config.h)
-sha256sums=('ee03a2cac6c4477702c8014e5ae5455c0acf4f47b87441c06e5da545ec234fa1'
+sha256sums=(SKIP 'ee03a2cac6c4477702c8014e5ae5455c0acf4f47b87441c06e5da545ec234fa1'
             'SKIP')
 
 prepare() {
