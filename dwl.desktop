@@ -1,0 +1,6 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=dwl
+Comment=Dynamic window manager 
+Exec=dwl
+Type=Application
