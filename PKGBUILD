@@ -9,9 +9,11 @@ url="https://github.com/djpohly/dwl"
 license=('GPL')
 depends=('wlroots')
 source=(git+https://github.com/rrrakyah/dwl-patched
-        config.h)
+        config.h
+       	dwl.desktop)
 sha256sums=(SKIP 'ee03a2cac6c4477702c8014e5ae5455c0acf4f47b87441c06e5da545ec234fa1'
-            'SKIP')
+            SKIP
+            SKIP)
 
 pkgver() {
   cd "$_gitname"
